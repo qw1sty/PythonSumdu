@@ -1,8 +1,5 @@
-text = input("Введіть текст латинськими літерами: ").lower()
+def five_min_elements(lst):
+    return sorted(lst)[:5]
 
-letters = set(text)
-more_than_one = {ch for ch in letters if text.count(ch) >= 2}
-only_one = {ch for ch in letters if text.count(ch) == 1}
-
-print("Літери, які зустрічаються >= 2 разів:", more_than_one)
-print("Літери, які зустрічаються 1 раз:", only_one)
+lst = list(map(int, input("Введіть елементи списку через пробіл: ").split()))
+print("Перші 5 мінімальних елементів:", five_min_elements(lst))
